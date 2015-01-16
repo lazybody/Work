@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" 
+    android:background="#000000" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="90dip"
+        android:layout_height="48dip"
+        android:layout_marginTop="14dip"
+        android:src="@drawable/ic_app_playstore"
+        android:layout_gravity="center"/>
+    <TextView android:id="@+id/battery_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    <TextView android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    <TextView android:id="@+id/device_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dip"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="#3399ff"/>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal">
+	    <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginLeft="51dp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:text="@string/dot_str"/>
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12sp"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="51dip"
+	        android:textColor="#666666"
+	        android:gravity="center|left"
+	        android:text="@string/android_pair"/>
+    </LinearLayout>
+    
+    <RelativeLayout android:id="@+id/image_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    
+    <LinearLayout android:id="@+id/ios_bt"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_marginTop="4dip"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="2dip"
+            android:layout_marginLeft="51dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/dot_str"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="2dip"
+            android:layout_marginLeft="8dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/ios_pair"/>
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginRight="60dip"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:gravity="top|right"
+            android:text="@string/ic_next_str"/>
+    </LinearLayout>
+
+</LinearLayout>
