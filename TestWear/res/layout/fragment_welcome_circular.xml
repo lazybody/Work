@@ -52,38 +52,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"/>
-    
     <LinearLayout android:id="@+id/ios_bt"
         android:layout_width="fill_parent"
-        android:layout_height="30dip"
+        android:layout_height="60dip"
         android:layout_marginTop="4dip"
-        android:orientation="horizontal">
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:layout_marginTop="2dip"
-            android:layout_marginLeft="51dp"
-            android:textColor="#ffffff"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="@string/dot_str"/>
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:layout_marginTop="2dip"
-            android:layout_marginLeft="8dp"
-            android:textColor="#ffffff"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="@string/ios_pair"/>
-        <TextView android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_marginRight="60dip"
-            android:textColor="#ffffff"
-            android:layout_gravity="center"
-            android:gravity="top|right"
-            android:text="@string/ic_next_str"/>
-    </LinearLayout>
+        android:orientation="vertical">
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="30dip"
+	        android:layout_marginTop="4dip"
+	        android:orientation="horizontal">
+	        <TextView android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="12sp"
+	            android:layout_marginTop="2dip"
+	            android:layout_marginLeft="51dp"
+	            android:textColor="#ffffff"
+	            android:gravity="center"
+	            android:layout_gravity="center"
+	            android:text="@string/dot_str"/>
+	        <TextView android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="12sp"
+	            android:layout_marginTop="2dip"
+	            android:layout_marginLeft="8dp"
+	            android:textColor="#ffffff"
+	            android:gravity="center"
+	            android:layout_gravity="center"
+	            android:text="@string/ios_pair"/>
+	        <TextView android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="24sp"
+	            android:layout_marginRight="60dip"
+	            android:textColor="#ffffff"
+	            android:layout_gravity="center"
+	            android:gravity="top|right"
+	            android:text="@string/ic_next_str"/>
+	    </LinearLayout>
+	    </LinearLayout>
 
 </LinearLayout>
