@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
+//上面的代码意思是，get请求根目录则调用views文件夹中的index模板，
+// 并且传入参数title为“Express”，这个title就可以在模板文件中直接使用。
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });

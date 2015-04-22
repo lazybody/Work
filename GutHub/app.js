@@ -1,28 +1,37 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express = require('express');//加载express模块
+var path = require('path');//文件路径模块
+var favicon = require('serve-favicon');//网页图标模块
+var logger = require('morgan');//logger模块
+var cookieParser = require('cookie-parser');//解析来自浏览器的cookie
+var bodyParser = require('body-parser');//读取并解析请求体，放到req.body中
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
-var app = express();
+var app = express();//生成express实例
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// 设置views路径和模板
+//__dirname是node.js里面的全局变量，即取得执行的js所在的路径，
+// 另外__dirname是目前执行的js文件名。所以，app.set(‘views’, __dirname + ‘/views’);
+// 是设置views的文件//夹。
+app.set('views', path.join(__dirname, 'views')); //设置view文件夹
+//设置express.js所使用的render engine。除了Jade之外，
+// express.js还支持EJS(embedded javascript)、
+// Haml、CoffeScript和jQuery template等js模板。
+app.set('view engine', 'jade'); //设置模板
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(logger('dev'));
-app.use(bodyParser.json());
+app.use(logger('dev'));//输出有颜色区分的日志，以便于调试开发
+app.use(bodyParser.json());//bodyParser()是Connect內建的middleware，设置此处可以将client提交过来的post请求放入request.body中。
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//提供./public下的静态文件
+app.use(express.static(path.join(__dirname, 'public')));//express.static()也是一个Connect內建的middleware来处理静态的requests，例如css、js、img文件等。所以static()里面指定的文件夹中的文件会直接作为静态资源吐出来。
 
-app.use('/', routes);
+
+app.use('/', routes);//指定程序路由
 app.use('/users', users);
 
 var recipes_map = {
