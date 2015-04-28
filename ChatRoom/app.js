@@ -24,6 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.post('/signup',routes.create);
+app.post('/login', routes.login);
 
 var http = require('http');
 var fs = require('fs');
@@ -65,6 +67,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;
